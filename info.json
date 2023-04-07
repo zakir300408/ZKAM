@@ -1,0 +1,20 @@
+{ 
+  "user_guide_file": "KAM App Guide.pdf",
+  "app_name": "KAM",
+  "app_version" : "0_1",
+  "app_id": "016" ,
+  "version_id": "01601",
+  "app_description": "Estimation of knee adduction moment (KAM) from wearable IMUs during walking.",
+  "parameters_setting": [
+    ["Save Options",
+      {"source": "save_mode", "title": "Save Mode", "type": "combo", "validation": ["csv", "xlsx"], "description": "Save file in specified format"}],
+    ["User Info",
+      {"source": "weight", "title": "Subject Weight (Kg)", "type": "float", "validation": [0, 200], "description": "Subject Weight (Kg)"},
+      {"source": "height", "title": "Subject Height (m)", "type": "float", "validation": [0, 2.5], "description": "Subject Height (m)"}]
+  ],
+
+  "user_fields": [{"name": "time", "data_type": "float", "size":1}, {"name": "KAM", "data_type": "float", "size":1}, {"name": "Stance_Flag", "data_type": "int", "size":1}],
+
+  "sensors": ["L_FOOT", "R_FOOT", "R_SHANK", "R_THIGH", "WAIST", "L_SHANK", "L_THIGH"],
+  "feedback": []
+}
